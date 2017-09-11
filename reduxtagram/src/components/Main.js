@@ -9,7 +9,7 @@ class Main extends React.Component {
       <div>
         <h1>
           <Link to="/">Reduxtagram</Link>
-          <Photogrid />
+          {this.props.children}
         </h1>
       </div>
     )
