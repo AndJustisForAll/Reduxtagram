@@ -4,7 +4,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './../store';
 
-import Main from './Main';
+import AppConnect from './AppConnect';
 import Photogrid from './Photogrid';
 import Single from './Single';
 import NotFound from './NotFound';
@@ -15,7 +15,7 @@ class App extends Component {
       <Provider store={store}>
         <BrowserRouter>
           <div>
-            <Route path="/" component={Main}/>
+            <Route path="/" component={AppConnect}/>
             <Switch>
                 <Route exact path="/" component={Photogrid}/>
                 <Route path="/view/:postId" component={Single}/>
