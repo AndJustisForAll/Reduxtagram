@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from './../actionCreators';
-import Main from './Main';
+import Photogrid from './Photogrid';
 
 function mapStateToProps(state) {
   return {
@@ -14,6 +14,6 @@ function mapDispatchToProps(dispatch) {
   return  bindActionCreators(actionCreators, dispatch);
 }
 
-const AppConnect = connect(mapStateToProps, mapDispatchToProps)(Main);
+const AppConnect = connect(mapStateToProps, mapDispatchToProps)(Photogrid);
 
 export default AppConnect;
