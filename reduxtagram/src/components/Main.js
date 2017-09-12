@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Photogrid from './Photogrid';
 
 class Main extends React.Component {
 

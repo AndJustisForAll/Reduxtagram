@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import store from './../store';
 
 import Main from './Main';
-import AppConnect from './AppConnect';
+import Photogrid from './Photogrid';
 import Single from './Single';
 import NotFound from './NotFound';
 
@@ -17,7 +17,7 @@ class App extends Component {
           <div>
             <Route path="/" component={Main}/>
             <Switch>
-                <Route exact path="/" component={AppConnect}/>
+                <Route exact path="/" component={Photogrid}/>
                 <Route path="/view/:postId" component={Single}/>
                 <Route component={NotFound}/>
               </Switch>
