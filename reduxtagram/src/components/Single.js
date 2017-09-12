@@ -9,12 +9,20 @@ import * as actionCreators from './../actionCreators';
 class Single extends React.Component {
 
   render() {
-    const i = this.props.posts.findIndex((post) => post.code === this.props.match.params.postId);
-    const post = this.props.posts[i];
+    const { postId } = this.props.match.params;
+    const { posts } = this.props || [];
+    const { comments } = this.props || [];
+    //find index
+    const i = posts.findIndex((single) => single.code === postId);
+    //find post
+    const post = posts[i];
+    //find comments
+    const postComments = comments[postId] || [];
+
     return (
       <div className="single-photo">
         <Photo i={i} post={post} {...this.props} />
-        <Comments />
+        <Comments postComments={postComments}/>
       </div>
     )
   }

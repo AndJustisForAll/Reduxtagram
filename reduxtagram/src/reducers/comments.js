@@ -4,7 +4,7 @@
 // 3 and returns the next state
 
 function comments(state = [], action) {
-  console.log(state, action);
+  //TODO
   return state;
 }
 
