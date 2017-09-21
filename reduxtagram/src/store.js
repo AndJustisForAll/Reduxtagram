@@ -14,6 +14,10 @@ const defaultState = {
   comments
 };
 
-const store = createStore(rootReducer, defaultState);
+//enhance store for Redux dev tools
+const enhancers = compose(window.devToolsExtension ? window.devToolsExtension() : f => f);
+
+
+const store = createStore(rootReducer, defaultState, enhancers);
 
 export default store;
